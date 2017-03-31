@@ -1,0 +1,45 @@
+package controller;
+
+import java.time.LocalDate;
+
+import model.persoon.Docent;
+import model.persoon.Student;
+
+public class Aanwezigheid {
+
+	private boolean aanwezig;
+	private LocalDate datum;
+	private Student student;
+	private Docent docent;
+
+	
+	public Aanwezigheid(LocalDate dtm, Student std){
+		datum = dtm;
+		student = std;
+	}
+	
+	public void setAanwezigheid(boolean anw){
+		aanwezig = anw;
+	}
+	
+	public boolean getAanwezig(){
+		return aanwezig;
+	}
+	
+	public Student getStudent(){
+		return student;
+	}
+	
+	public Docent getDocent(){
+		return docent;
+	}
+	
+	public LocalDate getDatum(){
+		return datum;
+	}
+	
+	public String toString(){
+		return aanwezig ? "Aanwezig" : "Afwezig" ;
+	}
+	
+}
